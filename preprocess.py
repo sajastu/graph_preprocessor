@@ -107,7 +107,7 @@ else:
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--run', default=['cnndm'], choices=['cnndm'], nargs='+')
+    parser.add_argument('--run', default=['common','cnndm'], choices=['cnndm'], nargs='+')
     parser.add_argument('-p', '--nprocs', type=int, default=cpu_count(), help='number of processes to use')
     parser.add_argument('--debug', action='store_true', help='enable debug mode')
 
@@ -117,7 +117,7 @@ def main():
 
     routines = {
         'common': [
-            {'func': extract_english, 'args': (input_paths['cpnet']['csv'], output_paths['cpnet']['csv'], output_paths['cpnet']['vocab'])},
+            # {'func': extract_english, 'args': (input_paths['cpnet']['csv'], output_paths['cpnet']['csv'], output_paths['cpnet']['vocab'])},
             {'func': construct_graph, 'args': (output_paths['cpnet']['csv'], output_paths['cpnet']['vocab'],
                                                output_paths['cpnet']['unpruned-graph'], False)},
             {'func': construct_graph, 'args': (output_paths['cpnet']['csv'], output_paths['cpnet']['vocab'],
