@@ -35,7 +35,7 @@ if not DEB:
             'test': f'{BASE_DIR}/{DS_DIR}/test.json',
         },
         'cpnet': {
-            'csv': f'{BASE_DIR}/GreaseLM/data/cpnet/conceptnet-assertions-5.6.0.csv',
+            'csv': f'{BASE_DIR}/cpnet/conceptnet-assertions-5.6.0.csv',
         },
     }
 
