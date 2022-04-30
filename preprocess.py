@@ -50,7 +50,7 @@ if not DEB:
         'gov-reports': {
             'statement': {
                 'train': f'{BASE_DIR}/{DS_DIR}/statement/train.statement.part.{SERVER_NAME}.jsonl',
-                'dev': f'{BASE_DIR}/{DS_DIR}/statement/dev.single.statement.part.{SERVER_NAME}.jsonl',
+                'dev': f'{BASE_DIR}/{DS_DIR}/statement/dev.statement.part.{SERVER_NAME}.jsonl',
                 'test': f'{BASE_DIR}/{DS_DIR}/statement/test.part.statement.part.{SERVER_NAME}.jsonl',
             },
             'ground': {
@@ -60,7 +60,7 @@ if not DEB:
             },
             'graph': {
                 'adj-train': f'{BASE_DIR}/{DS_DIR}/graph/train.graph.part.{SERVER_NAME}.adj.pk',
-                'adj-dev': f'{BASE_DIR}/{DS_DIR}/graph/dev.single.graph.part.{SERVER_NAME}.adj.pk',
+                'adj-dev': f'{BASE_DIR}/{DS_DIR}/graph/dev.graph.part.{SERVER_NAME}.adj.pk',
                 'adj-test': f'{BASE_DIR}/{DS_DIR}/graph/test.graph.part.{SERVER_NAME}.adj.pk',
             },
         },
