@@ -68,7 +68,7 @@ def convert_to_entailment(dataset_dir: str, output_file: str):
     random.shuffle(mp_instances)
 
     # mp_instances = mp_instances[:len(mp_instances)//2]
-    mp_instances = mp_instances[:2]
+    # mp_instances = mp_instances[:2]
 
 
     # 3 servers; here is the standing... (train)
