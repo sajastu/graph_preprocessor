@@ -54,7 +54,7 @@ def mp_converter(instance):
     return output_dict
 
 def convert_to_entailment(dataset_dir: str, output_file: str):
-    print(f'Processing is done on server {os.environ["SERVER_NAME"]}....')
+    # print(f'Processing is done on server {os.environ["SERVER_NAME"]}....')
     print(f'converting {dataset_dir} to entailment dataset...')
     nrow = sum(1 for _ in open(dataset_dir, 'r'))
     mp_instances = []
