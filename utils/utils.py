@@ -6,7 +6,7 @@ import pickle
 import time
 import types
 
-import torch
+# import torch
 
 
 def bool_flag(v):
