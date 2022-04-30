@@ -23,6 +23,8 @@ from preprocess_utils.graph import generate_adj_data_from_grounded_concepts__use
 #
 SERVER_NAME = 'aws'
 DEB = False
+DS_DIR='/cnn-dm/'
+BASE_DIR='/dev/disk/data/'
 
 if not DEB:
 

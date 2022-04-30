@@ -2,7 +2,9 @@ import os
 
 from datasets import load_dataset
 
-from path_vars import DS_DIR
+# from path_vars import DS_DIR
+DS_DIR='/cnn-dm/'
+BASE_DIR='/dev/disk/data/'
 
 os.makedirs('/dev/disk/data/cnn-dm/')
 
