@@ -67,7 +67,7 @@ def convert_to_entailment(dataset_dir: str, output_file: str):
     random.seed(88)
     random.shuffle(mp_instances)
 
-    mp_instances = mp_instances[:2*(len(mp_instances)//3)]
+    mp_instances = mp_instances[:(len(mp_instances)//2)]
     # mp_instances = mp_instances[:2]
 
 
