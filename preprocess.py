@@ -107,7 +107,7 @@ else:
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--run', default=['common','cnndm'], choices=['cnndm'], nargs='+')
+    parser.add_argument('--run', default=['cnndm'], choices=['cnndm'], nargs='+')
     parser.add_argument('-p', '--nprocs', type=int, default=cpu_count(), help='number of processes to use')
     parser.add_argument('--debug', action='store_true', help='enable debug mode')
 
