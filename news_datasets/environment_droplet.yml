@@ -161,4 +161,4 @@ dependencies:
     - yacs==0.1.8
     - yarl==1.7.2
     - zipp==3.6.0
-prefix: /home/ubunto/
+prefix: /home/ubuntu/anaconda3/envs/myenv
