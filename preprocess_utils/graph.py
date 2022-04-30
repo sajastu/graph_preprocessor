@@ -629,7 +629,7 @@ def generate_adj_data_from_grounded_concepts__use_LM(grounded_path, cpnet_graph_
         load_cpnet(cpnet_graph_path)
 
     conceptIDs_sentences_data = {}
-    statement_path = grounded_path.replace('grounded', 'statement')
+    statement_path = grounded_path.replace('ground', 'statement')
 
     with open(grounded_path, 'r', encoding='utf-8') as fin_ground, open(statement_path, 'r', encoding='utf-8') as fin_state:
         lines_ground = fin_ground.readlines()
