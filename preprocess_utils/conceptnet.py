@@ -206,7 +206,7 @@ def construct_graph(cpnet_csv_path, cpnet_vocab_path, output_path, prune=True):
                 graph.add_edge(obj, subj, rel=rel + len(relation2id), weight=weight)
                 attrs.add((obj, subj, rel + len(relation2id)))
 
-    # nx.write_gpickle(graph, output_path)
+    nx.write_gpickle(graph, output_path)
     print(f"graph file saved to {output_path}")
     print()
 
