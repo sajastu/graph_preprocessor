@@ -6,7 +6,7 @@ from datasets import load_dataset
 DS_DIR='/cnn-dm/'
 BASE_DIR='/dev/disk/data/'
 
-os.makedirs('/dev/disk/data/cnn-dm/')
+# os.makedirs('/dev/disk/data/cnn-dm/')
 
 
 # dataset = load_dataset('ccdv/cnn_dailymail')
