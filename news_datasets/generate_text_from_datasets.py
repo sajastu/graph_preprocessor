@@ -14,7 +14,7 @@ raw_datasets = load_dataset(
             'cnn_dailymail', '3.0.0'
         )
 
-raw_datasets['train'].to_json(f'{DS_DIR}/train.json')
-raw_datasets['validation'].to_json(f'{DS_DIR}/val.json')
-raw_datasets['test'].to_json(f'{DS_DIR}/test.json')
+raw_datasets['train'].to_json(f'{BASE_DIR}/{DS_DIR}/train.json')
+raw_datasets['validation'].to_json(f'{BASE_DIR}/{DS_DIR}/val.json')
+raw_datasets['test'].to_json(f'{BASE_DIR}/{DS_DIR}/test.json')
 
