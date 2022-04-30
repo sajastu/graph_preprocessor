@@ -107,7 +107,7 @@ else:
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--run', default=['cnndm'], choices=['cnndm'], nargs='+')
+    parser.add_argument('--run', default=['common', 'cnndm'], choices=['cnndm'], nargs='+')
     parser.add_argument('-p', '--nprocs', type=int, default=cpu_count(), help='number of processes to use')
     parser.add_argument('--debug', action='store_true', help='enable debug mode')
 
@@ -126,25 +126,25 @@ def main():
         ],
         'cnndm': [
 
-            # {'func': convert_to_entailment, 'args': (input_paths['gov-reports']['train'], output_paths['gov-reports']['statement']['train'])},
-            {'func': convert_to_entailment, 'args': (input_paths['gov-reports']['dev'], output_paths['gov-reports']['statement']['dev'])},
-            {'func': convert_to_entailment, 'args': (input_paths['gov-reports']['test'], output_paths['gov-reports']['statement']['test'])},
+            {'func': convert_to_entailment, 'args': (input_paths['gov-reports']['train'], output_paths['gov-reports']['statement']['train'])},
+            # {'func': convert_to_entailment, 'args': (input_paths['gov-reports']['dev'], output_paths['gov-reports']['statement']['dev'])},
+            # {'func': convert_to_entailment, 'args': (input_paths['gov-reports']['test'], output_paths['gov-reports']['statement']['test'])},
 
-            # {'func': ground, 'args': (output_paths['gov-reports']['statement']['train'], output_paths['cpnet']['vocab'],
-            #                           output_paths['cpnet']['patterns'], output_paths['gov-reports']['ground']['train'], args.nprocs)},
-            {'func': ground, 'args': (output_paths['gov-reports']['statement']['dev'], output_paths['cpnet']['vocab'],
-                                      output_paths['cpnet']['patterns'], output_paths['gov-reports']['ground']['dev'], args.nprocs)},
-            {'func': ground, 'args': (output_paths['gov-reports']['statement']['test'], output_paths['cpnet']['vocab'],
-                                      output_paths['cpnet']['patterns'], output_paths['gov-reports']['ground']['test'], args.nprocs)},
+            {'func': ground, 'args': (output_paths['gov-reports']['statement']['train'], output_paths['cpnet']['vocab'],
+                                      output_paths['cpnet']['patterns'], output_paths['gov-reports']['ground']['train'], args.nprocs)},
+            # {'func': ground, 'args': (output_paths['gov-reports']['statement']['dev'], output_paths['cpnet']['vocab'],
+            #                           output_paths['cpnet']['patterns'], output_paths['gov-reports']['ground']['dev'], args.nprocs)},
+            # {'func': ground, 'args': (output_paths['gov-reports']['statement']['test'], output_paths['cpnet']['vocab'],
+            #                           output_paths['cpnet']['patterns'], output_paths['gov-reports']['ground']['test'], args.nprocs)},
 
-            # {'func': generate_adj_data_from_ground_concepts__use_LM, 'args': (output_paths['gov-reports']['ground']['train'], output_paths['cpnet']['pruned-graph'],
-            #                                                                     output_paths['cpnet']['vocab'], output_paths['gov-reports']['graph']['adj-train'], args.nprocs)},
-            {'func': generate_adj_data_from_grounded_concepts__use_LM, 'args': (output_paths['gov-reports']['ground']['dev'], output_paths['cpnet']['pruned-graph'], output_paths['cpnet']['vocab'], output_paths['gov-reports']['graph']['adj-dev'], args.nprocs)},
-            #
-            {'func': generate_adj_data_from_grounded_concepts__use_LM, 'args': (output_paths['gov-reports']['ground']['test'],
-                                                                                output_paths['cpnet']['pruned-graph'],
-                                                                                output_paths['cpnet']['vocab'],
-                                                                                output_paths['gov-reports']['graph']['adj-test'], args.nprocs)},
+            {'func': generate_adj_data_from_grounded_concepts__use_LM, 'args': (output_paths['gov-reports']['ground']['train'], output_paths['cpnet']['pruned-graph'],
+                                                                                output_paths['cpnet']['vocab'], output_paths['gov-reports']['graph']['adj-train'], args.nprocs)},
+            # {'func': generate_adj_data_from_grounded_concepts__use_LM, 'args': (output_paths['gov-reports']['ground']['dev'], output_paths['cpnet']['pruned-graph'], output_paths['cpnet']['vocab'], output_paths['gov-reports']['graph']['adj-dev'], args.nprocs)},
+
+            # {'func': generate_adj_data_from_grounded_concepts__use_LM, 'args': (output_paths['gov-reports']['ground']['test'],
+            #                                                                     output_paths['cpnet']['pruned-graph'],
+            #                                                                     output_paths['cpnet']['vocab'],
+            #                                                                     output_paths['gov-reports']['graph']['adj-test'], args.nprocs)},
         ],
     }
 

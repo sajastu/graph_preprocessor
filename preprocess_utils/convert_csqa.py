@@ -68,32 +68,35 @@ def convert_to_entailment(dataset_dir: str, output_file: str):
     random.seed(88)
     random.shuffle(mp_instances)
 
+    mp_instances = mp_instances[:2*(len(mp_instances)//3)]
+
+
     # 3 servers; here is the standing... (train)
     # 0: brunello
     # 1: chianti
     # 2: barolo
 
-    if os.environ['SERVER_NAME'] == 'brunello':
-        index = 0
-    elif os.environ['SERVER_NAME'] == 'chianti':
-        index = 1
-    # elif os.environ['SERVER_NAME'] == 'barbaresco':
+    # if os.environ['SERVER_NAME'] == 'brunello':
+    #     index = 0
+    # elif os.environ['SERVER_NAME'] == 'chianti':
+    #     index = 1
+    # # elif os.environ['SERVER_NAME'] == 'barbaresco':
+    # #     index = 2
+    # elif os.environ['SERVER_NAME'] == 'barolo':
     #     index = 2
-    elif os.environ['SERVER_NAME'] == 'barolo':
-        index = 2
-
-    else:
-        os.exit(0)
-
-    # mp_instances = mp_instances
-
-    if index != 2:
-        mp_instances = mp_instances[(index) * (len(mp_instances) // 3):(index+1) * (len(mp_instances) // 3)]
-    elif index==2:
-        mp_instances = mp_instances[(index) * (len(mp_instances) // 3):]
+    #
+    # else:
+    #     os.exit(0)
+    #
+    # # mp_instances = mp_instances
+    #
+    # if index != 2:
+    #     mp_instances = mp_instances[(index) * (len(mp_instances) // 3):(index+1) * (len(mp_instances) // 3)]
+    # elif index==2:
+    #     mp_instances = mp_instances[(index) * (len(mp_instances) // 3):]
 
     print('Writing instances to entailment...')
-    pool = Pool(20)
+    pool = Pool(128)
     try:
         with open(output_file, 'w') as output_handle:
             for output_dict in tqdm(pool.imap_unordered(mp_converter, mp_instances), total=len(mp_instances)):
