@@ -126,7 +126,7 @@ def main():
         ],
         'cnndm': [
 
-            {'func': convert_to_entailment, 'args': (input_paths['gov-reports']['train'], output_paths['gov-reports']['statement']['train'])},
+            # {'func': convert_to_entailment, 'args': (input_paths['gov-reports']['train'], output_paths['gov-reports']['statement']['train'])},
             # {'func': convert_to_entailment, 'args': (input_paths['gov-reports']['dev'], output_paths['gov-reports']['statement']['dev'])},
             # {'func': convert_to_entailment, 'args': (input_paths['gov-reports']['test'], output_paths['gov-reports']['statement']['test'])},
 
