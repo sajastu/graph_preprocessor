@@ -42,7 +42,6 @@ from tqdm import tqdm
 import spacy
 
 nlp = spacy.load("en_core_web_md")
-nlp.max_length = 1500000
 
 __all__ = ['convert_to_entailment']
 

@@ -348,7 +348,7 @@ def ground(statement_path, cpnet_vocab_path, pattern_path, output_path, num_proc
                 counter_sent += 1
             if counter_sent == 12:
                 break
-
+        import pdb;pdb.set_trace()
         # for answer in j["question"]["choices"]:
         #     ans = answer['text']
         #     ans = " ".join(answer['text'].split("_"))
