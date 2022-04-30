@@ -21,7 +21,7 @@ cd ../../
 mkdir -p /dev/disk/data/cnn-dm/ground/
 mkdir -p /dev/disk/data/cnn-dm/graph/
 mkdir -p /dev/disk/data/cnn-dm/statement/
-python news_datasets/generate_text_from_datasets.py
+python3 news_datasets/generate_text_from_datasets.py
 
 
 
