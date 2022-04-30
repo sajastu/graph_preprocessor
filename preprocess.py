@@ -41,11 +41,11 @@ if not DEB:
 
     output_paths = {
         'cpnet': {
-            'csv': f'{BASE_DIR}/gov-reports/cpnet/conceptnet.en.csv',
-            'vocab': f'{BASE_DIR}/gov-reports/cpnet/concept.txt',
-            'patterns': f'{BASE_DIR}/gov-reports/cpnet/matcher_patterns.json',
-            'unpruned-graph': f'{BASE_DIR}/gov-reports/cpnet/conceptnet.en.unpruned.graph',
-            'pruned-graph': f'{BASE_DIR}/gov-reports/cpnet/conceptnet.en.pruned.graph',
+            'csv': f'{BASE_DIR}/cpnet/conceptnet.en.csv',
+            'vocab': f'{BASE_DIR}/cpnet/concept.txt',
+            'patterns': f'{BASE_DIR}/cpnet/matcher_patterns.json',
+            'unpruned-graph': f'{BASE_DIR}/cpnet/conceptnet.en.unpruned.graph',
+            'pruned-graph': f'{BASE_DIR}/cpnet/conceptnet.en.pruned.graph',
         },
         'gov-reports': {
             'statement': {
